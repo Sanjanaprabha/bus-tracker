@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Real-time Tracker</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
+</head>
+<body class="home-page">
+
+  
+
+  <!-- 🚏 Form Section -->
+  <div class="home-container">
+    <div class="home-content">
+      <i class="fas fa-bus home-icon"></i>
+      <h1>Real-time Bus Tracker</h1>
+      <form id="username-form">
+        <input type="text" id="username-input" placeholder="Enter your name" required />
+        <button type="submit">Locate Me</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById("username-form");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const username = document.getElementById("username-input").value;
+      if (!username) {
+        alert("Username is required!");
+        return;
+      }
+      localStorage.setItem("username", username);
+      window.location.href = "/map";
+    });
+  </script>
+</body>
+</html>
