@@ -3,7 +3,6 @@ const app = express();
 const path = require('path');
 const http = require('http');
 const socketio = require('socket.io');
-
 const server = http.createServer(app);
 const io = socketio(server);
 
@@ -49,9 +48,9 @@ app.get('/paper', (req, res) => {
     res.render('paper');
 });
 
-module.exports = app;
 
-// server.listen(3000, () => {
-//     console.log('Server running on port 3000');
-// });
+
+server.listen(3000, () => {
+    console.log('Server running on port 3000');
+});
 
