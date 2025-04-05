@@ -45,6 +45,9 @@ app.get('/', (req, res) => {
 app.get('/map', (req, res) => {
     res.render('map');
 });
+app.get('/paper', (req, res) => {
+    res.render('paper');
+});
 
 server.listen(3000, () => {
     console.log('Server running on port 3000');

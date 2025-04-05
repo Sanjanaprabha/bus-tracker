@@ -22,6 +22,8 @@
       <form id="username-form">
         <input type="text" id="username-input" placeholder="Enter your name" required />
         <button type="submit">Locate Me</button>
+        <br>
+        <button id="paper">Read Research paper</button>
       </form>
     </div>
   </div>
@@ -37,7 +39,11 @@
       }
       localStorage.setItem("username", username);
       window.location.href = "/map";
+
     });
+    document.getElementById("paper").onclick = () => {
+      window.location.href = "/paper";
+    };
   </script>
 </body>
 </html>
